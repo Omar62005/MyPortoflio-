@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b12" />
+  <meta name="description" content="Omar Hesham — Backend Developer & Computer Science Student." />
+  <title>Omar Hesham | Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080b12;--panel:#101622;--panel2:#141d2b;--text:#edf3ff;--muted:#9aa8bd;--line:rgba(180,202,236,.13);--cyan:#65e6d2;--blue:#7aa7ff;--purple:#b49aff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 80% 10%,rgba(75,112,190,.16),transparent 35%),radial-gradient(ellipse at 10% 45%,rgba(55,190,170,.10),transparent 30%),linear-gradient(145deg,#080b12,#0a101b 60%,#080b12)}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 44px));margin:auto}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-weight:800;letter-spacing:-1px;font-size:20px}.brand span{color:var(--cyan)}.navlinks{display:flex;gap:30px;color:var(--muted);font-size:13px}.navlinks a:hover{color:var(--cyan)}
+    .menu{display:none;background:none;border:1px solid var(--line);color:white;padding:9px 12px;border-radius:10px}
+    .hero{min-height:690px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px;padding:75px 0 95px}
+    .eyebrow,.mono{font-family:"DM Mono",monospace;letter-spacing:1.5px;text-transform:uppercase;font-size:11px;color:var(--cyan)}
+    .eyebrow{display:flex;align-items:center;gap:10px}.dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 15px var(--cyan);animation:pulse 1.8s infinite}
+    h1{font-size:clamp(48px,7vw,82px);line-height:1.04;letter-spacing:-5px;margin:25px 0 22px;font-weight:800}h1 .gradient{background:linear-gradient(100deg,var(--cyan),var(--blue) 55%,var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .intro{font-size:17px;line-height:1.9;color:var(--muted);max-width:570px}.actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+    .btn{padding:14px 21px;border-radius:12px;font-size:13px;font-weight:800;display:inline-flex;align-items:center;gap:10px;transition:.25s;border:1px solid var(--line)}
+    .btn.primary{background:var(--cyan);color:#071411;border-color:var(--cyan)}.btn:hover{transform:translateY(-4px);box-shadow:0 12px 35px #0006}.btn.secondary{background:#ffffff08}
+    .hero-art{height:430px;position:relative;display:grid;place-items:center}
+    .orb{width:300px;height:300px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#8affea 0,#4e9fbd 22%,#344c86 53%,#171b37 72%);filter:drop-shadow(0 0 70px #5ee4d355);animation:float 6s ease-in-out infinite;position:relative}
+    .orb:before,.orb:after{content:"";position:absolute;inset:-35px;border:1px solid #7be7dc55;border-radius:50%;transform:rotateX(65deg) rotateZ(-25deg)}.orb:after{inset:-65px;transform:rotateX(68deg) rotateZ(45deg);border-color:#8daeff44}
+    .code-card{position:absolute;right:0;bottom:25px;width:250px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:#111927dd;backdrop-filter:blur(12px);box-shadow:0 20px 60px #0006;transform:rotate(-4deg)}
+    .code-card .dots{display:flex;gap:5px;margin-bottom:15px}.code-card .dots i{width:6px;height:6px;background:#506078;border-radius:50%}.code-line{font:11px/2 "DM Mono",monospace;color:#a9b8ce}.code-line b{color:var(--cyan);font-weight:400}.code-line em{color:var(--purple);font-style:normal}
+    .float-tag{position:absolute;padding:10px 14px;background:#131d2b;border:1px solid var(--line);border-radius:10px;font:11px "DM Mono",monospace;color:#c9d6e9;box-shadow:0 10px 35px #0005}.tag-one{top:50px;left:0;animation:float 5s ease-in-out infinite}.tag-two{top:145px;right:-15px;animation:float 7s ease-in-out infinite reverse}
+    section{padding:95px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:38px;gap:20px}h2{font-size:clamp(32px,4vw,46px);letter-spacing:-2px;margin:12px 0 0}.section-note{color:var(--muted);font-size:13px;max-width:300px;line-height:1.7}
+    .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:25px}.panel{background:linear-gradient(145deg,#141e2cdd,#0e1520dd);border:1px solid var(--line);border-radius:20px;padding:30px}.about-copy{color:var(--muted);line-height:1.95;font-size:14px}.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{padding:22px;background:#ffffff05;border:1px solid var(--line);border-radius:15px}.stat strong{display:block;font-size:27px;color:var(--cyan);letter-spacing:-1px}.stat span{font-size:11px;color:var(--muted)}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.skill{padding:10px 13px;border:1px solid var(--line);background:#ffffff06;border-radius:9px;color:#c8d5e8;font:11px "DM Mono",monospace;transition:.2s}.skill:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-3px)}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.project{padding:27px;background:linear-gradient(145deg,#141e2c,#0d1420);border:1px solid var(--line);border-radius:18px;position:relative;overflow:hidden;transition:.3s}.project:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:#65e6d20c;right:-90px;top:-100px;transition:.4s}.project:hover{transform:translateY(-7px);border-color:#65e6d266}.project:hover:after{transform:scale(1.8)}
+    .project-top{display:flex;justify-content:space-between;align-items:center;color:var(--cyan);font:11px "DM Mono",monospace}.project h3{font-size:21px;letter-spacing:-.6px;margin:24px 0 10px}.project p{font-size:13px;line-height:1.8;color:var(--muted);min-height:70px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px}.tags span{font:10px "DM Mono",monospace;color:#aebbd0;background:#ffffff08;padding:7px 9px;border-radius:6px}
+    .journey{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.step{border-left:1px solid #65e6d277;padding:8px 0 8px 20px}.step .year{font:11px "DM Mono",monospace;color:var(--cyan)}.step h3{font-size:16px;margin:12px 0 8px}.step p{font-size:12px;line-height:1.8;color:var(--muted)}
+    .contact{padding:45px;background:linear-gradient(110deg,#142b32,#17223a 60%,#201b3c);border:1px solid #83e6d233;border-radius:22px;display:flex;justify-content:space-between;align-items:center;gap:25px}.contact h2{font-size:clamp(30px,4vw,44px);max-width:550px}.contact p{color:#b4c4d5;font-size:13px;line-height:1.8}.contact .btn{white-space:nowrap}
+    footer{padding:28px 0;color:#77869c;font-size:11px;display:flex;justify-content:space-between;gap:15px}.socials{display:flex;gap:18px}.socials a:hover{color:var(--cyan)}
+    .reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+    @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(3deg)}}@keyframes pulse{50%{opacity:.35;box-shadow:0 0 4px var(--cyan)}}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:65px;gap:5px}.hero-art{height:360px}.orb{width:230px;height:230px}.code-card{right:5%;bottom:0}.tag-two{right:0}.about-grid{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}.section-head{align-items:flex-start;flex-direction:column}}
+    @media(max-width:600px){.wrap{width:min(100% - 32px,1120px)}.nav{height:70px}.menu{display:block}.navlinks{display:none;position:absolute;top:69px;left:16px;right:16px;padding:18px;background:#111927;border:1px solid var(--line);border-radius:13px;z-index:5;flex-direction:column;gap:18px}.navlinks.open{display:flex}h1{letter-spacing:-3px}.hero{min-height:auto;padding-bottom:55px}.hero-art{height:310px}.orb{width:190px;height:190px}.float-tag{font-size:9px}.code-card{width:215px;right:0}.project-grid,.journey{grid-template-columns:1fr}.project p{min-height:0}section{padding:70px 0}.panel{padding:23px}.contact{padding:28px}footer{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#home">OH<span>.</span></a>
+    <button class="menu" id="menuBtn" aria-label="Toggle navigation">☰</button>
+    <nav class="navlinks" id="navLinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="home" style="border:0">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> AVAILABLE FOR OPPORTUNITIES</div>
+        <h1>Building the<br><span class="gradient">logic behind</span><br>the web.</h1>
+        <p class="intro">Hey, I'm <strong style="color:#edf3ff">Omar Hesham</strong> — a Computer Science student and aspiring Backend Developer. I build practical web experiences, design reliable server-side systems, and explore how AI can make software smarter.</p>
+        <div class="actions"><a class="btn primary" href="#projects">Explore my work <span>↗</span></a><a class="btn secondary" href="#contact">Let's connect <span>↗</span></a></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract animated developer illustration">
+        <div class="orb"></div>
+        <div class="float-tag tag-one">Django / Python</div><div class="float-tag tag-two">Turning ideas into APIs</div>
+        <div class="code-card"><div class="dots"><i></i><i></i><i></i></div>
+          <div class="code-line"><em>class</em> Developer:</div><div class="code-line">&nbsp; name = <b>"Omar"</b></div><div class="code-line">&nbsp; focus = <b>"Backend"</b></div><div class="code-line">&nbsp; build( <b>ideas</b> )</div><div class="code-line"><em>return</em> "something great"</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about"><div class="wrap reveal">
+      <div class="section-head"><div><div class="mono">01 / ABOUT ME</div><h2>Curious by nature.<br>Builder by choice.</h2></div><p class="section-note">I enjoy understanding how things work — then turning that knowledge into useful products.</p></div>
+      <div class="about-grid">
+        <div class="panel"><p class="about-copy">I'm studying Computer Science at New Mansoura University, with a strong interest in backend engineering and building complete software solutions. My work combines web development, databases, and AI-powered features. I care about writing clear code, solving real problems, and continuously improving through hands-on projects.</p><p class="about-copy">Currently focused on strengthening my backend skills with Python and Django while expanding my experience with APIs, databases, and intelligent applications.</p></div>
+        <div class="stats"><div class="stat"><strong>CS</strong><span>Computer Science</span></div><div class="stat"><strong>API</strong><span>Backend mindset</span></div><div class="stat"><strong>AI</strong><span>Agent & RAG projects</span></div><div class="stat"><strong>∞</strong><span>Always learning</span></div></div>
+      </div>
+    </div></section>
+
+    <section id="skills"><div class="wrap reveal">
+      <div class="section-head"><div><div class="mono">02 / TOOLKIT</div><h2>My technical toolkit.</h2></div><p class="section-note">The technologies I use to build, connect, and improve software.</p></div>
+      <div class="panel"><div class="mono">LANGUAGES & BACKEND</div><div class="skills"><span class="skill">Python</span><span class="skill">Django</span><span class="skill">C++</span><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span></div>
+      <div class="mono" style="margin-top:28px">DATA & DEVELOPER TOOLS</div><div class="skills"><span class="skill">MySQL</span><span class="skill">SQL</span><span class="skill">Git</span><span class="skill">GitHub</span><span class="skill">Postman</span><span class="skill">VS Code</span></div>
+      <div class="mono" style="margin-top:28px">AI & EMERGING TECH</div><div class="skills"><span class="skill">LLMs</span><span class="skill">AI Agents</span><span class="skill">RAG</span><span class="skill">LangChain</span><span class="skill">FAISS</span><span class="skill">Embeddings</span></div></div>
+    </div></section>
+
+    <section id="projects"><div class="wrap reveal">
+      <div class="section-head"><div><div class="mono">03 / SELECTED WORK</div><h2>Things I've built.</h2></div><p class="section-note">A selection of academic and personal projects. More experiments are always in progress.</p></div>
+      <div class="project-grid">
+        <article class="project"><div class="project-top"><span>01 — AI / RAG</span><span>↗</span></div><h3>Housing Assistant</h3><p>An intelligent assistant that helps students explore rental listings, compare properties, and understand lease details using structured data and document retrieval.</p><div class="tags"><span>Python</span><span>RAG</span><span>FAISS</span><span>LLM</span></div></article>
+        <article class="project"><div class="project-top"><span>02 — WEB APP</span><span>↗</span></div><h3>GroupFlow</h3><p>A team project management platform concept for students, with project spaces, task assignments, deadlines, priorities, and progress tracking.</p><div class="tags"><span>Backend</span><span>Database Design</span><span>Web Development</span></div></article>
+        <article class="project"><div class="project-top"><span>03 — DATABASE</span><span>↗</span></div><h3>Restaurant Reservation System</h3><p>A database-focused application designed to manage restaurant reservations and organize essential customer and booking information.</p><div class="tags"><span>MySQL</span><span>SQL</span><span>Database Design</span></div></article>
+        <article class="project"><div class="project-top"><span>04 — AUTOMATION</span><span>↗</span></div><h3>QR Attendance Scanner</h3><p>A lightweight attendance validation concept that scans course QR codes and checks session limits, course dates, and completion rules.</p><div class="tags"><span>JavaScript</span><span>HTML</span><span>CSS</span></div></article>
+      </div>
+      <p style="color:var(--muted);font-size:11px;margin-top:18px">Project descriptions are summaries. Add repository links and screenshots when you publish your work.</p>
+    </div></section>
+
+    <section id="journey"><div class="wrap reveal">
+      <div class="section-head"><div><div class="mono">04 / MY JOURNEY</div><h2>Learning by building.</h2></div></div>
+      <div class="journey">
+        <div class="step"><div class="year">2023 — 2027</div><h3>Computer Science</h3><p>Building a foundation in programming, algorithms, databases, and software engineering at New Mansoura University.</p></div>
+        <div class="step"><div class="year">PRACTICAL EXPERIENCE</div><h3>Teaching & Collaboration</h3><p>Working as a CS instructor and helping learners understand programming through practical, hands-on activities.</p></div>
+        <div class="step"><div class="year">CONTINUOUS LEARNING</div><h3>Backend & AI Engineering</h3><p>Exploring Django, APIs, AI agents, fine-tuning concepts, and retrieval-augmented generation through projects and training.</p></div>
+      </div>
+    </div></section>
+
+    <section id="contact"><div class="wrap reveal"><div class="contact">
+      <div><div class="mono">05 / GET IN TOUCH</div><h2>Have an idea? Let's build something useful.</h2><p>I'm open to internships, collaborations, and opportunities to learn and contribute.</p></div>
+      <a class="btn primary" href="mailto:your.email@example.com">Email me ↗</a>
+    </div></div></section>
+  </main>
+  <footer class="wrap"><span>© <span id="year"></span> Omar Hesham. Designed & built with curiosity.</span><div class="socials"><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
